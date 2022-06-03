@@ -1,0 +1,194 @@
+/* ==========================================================================
+    Global Settings
+========================================================================== */
+
+/*
+* Boxsizing set to border box http://css-tricks.com/box-sizing/
+*/
+
+*, *:before, *:after { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+/*
+* Remove text-shadow in selection highlight: h5bp.com/i
+* These selection rule sets have to be separate.
+* Customize the background color to match your design.
+*/
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+* Body settings, change it as required
+*/
+
+body { font-size: 1.3em; line-height: 1.4; overflow-x:hidden; background:#fff; font-weight:400; }
+
+/*
+* Headings
+*/
+
+h1, h2, h3, h4, h5, h6 { font-family: 'Lato', sans-serif;font-weight:700; color:#000; text-rendering: optimizeLegibility; margin-top:0px; margin-bottom:20px; }
+h1 { font-size:38px; line-height:48px; }
+h2 { font-size:28px; line-height:48px;}
+h3 { font-size:20px; line-height:26px;}
+h4 { font-size:18px; line-height:24px;}
+h5 { font-size:16px; line-height:20px; }
+h6 { font-size:14px; line-height:18px; }
+p { font-size:16px; color:#000; line-height:24px; margin-bottom:16px; }
+p a { color:#FC5846;}
+p a:hover, p a:focus { color:#FC5846;}
+
+/*
+* Links
+*/
+
+a { color: #FC5846; text-decoration: none; line-height: inherit; }
+a:hover { /*color: #2795b6;*/ color: #FC5846; text-decoration:none; }
+a:focus { color: #FC5846; outline: none; }
+p a, p a:visited { line-height: inherit; }
+
+/*
+* A better looking default horizontal rule
+*/
+
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #c2c2c2; margin:16px 0; padding: 0; position:relative; }
+
+/*
+* Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+*/
+img {
+    vertical-align: middle; max-width: 100%; height: auto; -ms-interpolation-mode: bicubic;
+}
+
+/* ==========================================================================
+    Layout
+========================================================================== */
+
+/* Container ---------------------- */
+#container-wrap { min-width:320px; left:0; position:relative; transition:all .5s cubic-bezier(0.19, 1, 0.22, 1) 0.1s;-webkit-transition:all .5s cubic-bezier(0.19, 1, 0.22, 1) 0.1s;-moz-transition:all .5s cubic-bezier(0.19, 1, 0.22, 1) 0.1s;-o-transition:all .5s cubic-bezier(0.19, 1, 0.22, 1) 0.1s;-ms-transition:all .5s cubic-bezier(0.19, 1, 0.22, 1) 0.1s;}
+.container { max-width:1200px; width:100%; }
+
+/* Banner ---------------------- */
+#banner { height:310px; padding-top:95px; text-align:center; background:url(../imgs/banner.png) no-repeat; background-size:cover;  }
+
+
+/* ==========================================================================
+    Common Functionalities & UI Elements
+========================================================================== */
+
+/*--- Modal --- */
+.modal .modal-dialog.col-lg { width:1170px; }
+.modal .modal-header { border-bottom:0; padding:25px 25px 2px 25px; }
+.modal .modal-header p { margin-bottom:0;}
+.modal .modal-footer { padding:16px; border:0;}
+.modal-sm { width:336px;}
+.modal .modal-footer .btn { min-width:120px; margin-left:14px;}
+.modal .modal-footer .btn:first-child { margin-left:0;}
+.modal button.close { font-size:36px; line-height:36px; color:#17061e; opacity:1; }
+.modal button.close:hover, .modal button.close:focus { opacity:1; }
+.modal .modal-content { border:0; border-radius:0px; box-shadow:none; }
+.modal-backdrop {background-color: rgba(0, 0, 0, 0.9);}
+.modal-backdrop.in {opacity:1;}
+.modal .modal-body { padding:25px; padding-top:0px; }
+.modal .modal-body h2 .icon { margin-right:18px; }
+.modal-backdrop.show { opacity:0.5;}
+.modal.show { opacity:1;}
+.modal.fade .modal-dialog { transform:none; }
+
+/*---Form1 --- */
+.form1 ul, .post .form1 ul { margin:0; padding:0; list-style:none;}
+.form1 ul li { margin-bottom:15px;}
+.form1 ul li:last-child { margin-bottom:0;}
+.form1 .required {color:#ff0000;}
+.form1 .form-control { border-radius:0px; font-size:14px; box-shadow:none; line-height:20px; color:rgba(0,0,0,0.5); }
+.form1 .form-control, .form1 input[type="text"], .form1 input[type="password"],.form1 input[type="email"] { height:42px; border:1px solid #dfdfdf; box-shadow:none; }
+
+.form1 input[type="email"] { text-transform:lowercase; }
+.form1 .forgot-password { float:right; font-size:13px;}
+.form1 .error_msg { color: #f54b5e; display:block; font-size:12px; position: relative; line-height:18px; margin-top:4px; }
+.form1 .info_msg {color: #17061e; display:block; font-size:12px; position: relative; line-height:16px; padding-top:4px;}
+.form1 textarea.form-control { resize:none; height:64px; border:1px solid #dfdfdf; padding:11px 12px;}
+.form1 .has-error textarea.form-control { border:1px solid #d54343 !important;}
+.form1 .has-error input[type="text"], .form1 .has-error input[type="password"], .form1 .has-error input[type="email"] { border:1px solid #d54343;}
+.form1 .clear-row { clear:left;}  
+
+.form1 label { font-size:14px; color:rgba(0,0,0,0.5); display:block; font-weight:500; }
+.form1 label.left-label { margin-bottom:0; padding-top:8px;}
+.form1 .radio-input { position:relative; display:block; padding-left:25px; margin-bottom:10px;}
+.form1 .radio-input.radio-inline { display:inline-block; margin-left:0; margin-right:20px;}
+.form1 .radio-input label { font-size:14px; color:#17061e; margin:0; cursor:pointer; }
+.form1 .radio-input label a { color:#eb494f;}
+.form1 .radio-input input[type=radio]:checked + label:before { background:url(../images/sprite.png) -272px -215px no-repeat; }
+.form1 .radio-input input[type=radio] { display: none; }  
+.form1 .radio-input label:before {content: ""; display: inline-block; width: 20px; height: 21px; margin-right: 10px;  position: absolute; left: 0;  top:1px; background:url(../images/sprite.png) 0px -82px no-repeat; }  
+.form1 .radio-input input[type=radio]:checked + label:before {background:url(../images/sprite.png) 0px -60px no-repeat; }
+.form1 .checkbox-input { position:relative; display:inline-block; padding-left:24px; }
+.form1 .checkbox-input.checkbox-inline { display:inline-block; margin-left:0; margin-bottom:10px; margin-right:20px;}
+.form1 .checkbox-input.checkbox-block { display:block; margin-bottom:16px; text-transform:capitalize;}
+.form1 .checkbox-input.checkbox-block label { font-weight:normal;}
+.form1 .checkbox-input label { font-size:14px; margin:0; line-height:19px;cursor:pointer;  }
+.form1 .checkbox-input input[type=checkbox] { display: none; }  
+.form1 .checkbox-input label:before {content: ""; display: inline-block; width: 20px; height: 21px; margin-right: 10px;  position: absolute; left: 0;  top:1px; background:url(../images/sprite.png) 0px -13px no-repeat; }  
+.form1 .checkbox-input input[type=checkbox]:checked + label:before {background:url(../images/sprite.png) 0px -37px no-repeat; }
+
+.form1 .select { position:relative; display:block; border:1px solid #e9e9e9; border-radius:5px;  min-height:42px; height:auto; width:100%;}
+.form1 .select select { width:100%; border:0; background: #fff; padding:0 35px 0 5px; height:42px; font-size:14px; color:rgba(0,0,0,0.5); position:relative; border-radius:5px; }
+.form1 .select select { -webkit-appearance: none; -moz-appearance: none; text-indent: 1px; text-overflow: '';}
+.form1 .select select::-ms-expand{ display:none;}
+.form1 .select:after { z-index:5; pointer-events:none; display:block; position:absolute; right:20px; top:16px; background:url(../images/sprite.png) 0px 0px no-repeat; width:14px; height:8px; content:"";}
+
+.form-horizontal .control-label { padding-top:8px;}
+.form-horizontal .control-label.two-lines { padding-top:0;}
+
+.form1 ul li.has-tooltip { position:relative;}
+.form-tooltip { position:absolute; width:300px; background:#fff; right:-338px; padding-left:32px; z-index:100; display:none; top:0;}
+.form-tooltip h3, .form-tooltip h5 { margin-bottom:4px;}
+.form-tooltip ul {list-style:outside !important; padding-left:24px !important;}
+.form-tooltip ul li { margin-bottom:8px !important;}
+.form-tooltip p { margin-bottom:8px;}
+.form-tooltip:before { width:16px; height:28px; background:url("../images/sprite.png") -159px -339px no-repeat; display:block; position:absolute; left:-17px; top:5px; content:"";}
+
+.form1 .btn-group { display:block;}
+.form1 .btn-group .select-option { display:block; float:left; width:97px; margin-right:20px; }
+.form1 .btn-group .select-option input[type="radio"] { visibility:hidden; position:absolute;}
+.form1 .btn-group .select-option label { display:block; cursor:pointer; margin:0; background:#ffffff; border: 1px solid #e9e9e9; line-height:50px; font-size:14px; color:rgba(0,0,0,0.5); padding:0 7px; border-radius:5px; text-align:center;}
+.form1 .btn-group .select-option.active label { cursor:pointer; border-color:#00bfe7; }
+
+/*--- Has-error  --- */
+.has-error .form-control, .has-error .form-control:focus, .has-error .select , .has-error .chosen-container .chosen-choices, .has-error .chosen-container .chosen-single{border-color:#f65039 !important;}
+.has-error .form1 textarea.form-control {border-color:#f65039 !important;}
+
+/*--- Post --- */
+.post { color:#17061e; font-size:16px; line-height:20px; hyphens: auto;}
+.inner-post { padding-left:14px;}
+
+.post ul, .post ol { padding:0px; margin-left:20px; }
+.post li { margin-bottom:15px; color:#17061e; font-size:13px; line-height:20px; padding-left:16px; font-weight:500; }
+
+/* Banner ---------------------- */
+#banner .logo { margin-bottom:40px; }
+#banner .logo img { max-width:200px; }
+
+/* Login ---------------------- */
+#login { width:570px; background:#fff; margin:0px auto; padding:30px 45px; position:relative; top:-70px; }
+#login .button1 { font-weight:bold; font-size:12px;}
+
+/*--- Button1 --- */
+.button1 { border-radius:3px; background: #FC5846; color:#fff; border:0; font-size:14px; line-height:18px; padding:10px 20px; font-weight:500; transition: all 0.3s ease 0s; outline:none; min-width:120px; box-shadow:none; }
+.button1:hover,.button1:focus, .button1:active { color:#fff; box-shadow:none;}
+
+.bootbox.modal  .modal-body { padding-top:20px; }
+.bootbox.modal  .bootbox-body { font-size:20px; }
+
+@media (max-width:767px) {
+	
+	#login { width:100%;}
+	
+}
+

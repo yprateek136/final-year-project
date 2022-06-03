@@ -1,0 +1,187 @@
+/*!
+ * Start Bootstrap - Simple Sidebar (https://startbootstrap.com/template-overviews/simple-sidebar)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-simple-sidebar/blob/master/LICENSE)
+ */
+
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+    #wrapper.toggled {
+        padding-left: 228px;
+    }
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 228px;
+    width: 0;
+    height: 100%;
+    margin-left: -228px;
+    overflow-y: auto;
+    background: #3F82F7;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    overflow-x: hidden;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 228px;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 15px;
+}
+
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -228px;
+}
+
+
+/* Sidebar Styles */
+
+.sidebar-brand {
+    font-size: 1.24rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-indent: 30px;
+}
+
+    .sidebar-brand a {
+        color: #ffffff;
+    }
+
+        .sidebar-brand a:hover {
+            color: rgba(255,255,255,0.7);
+            background: none;
+        }
+
+.sidebar-nav {
+    width: 228px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+    .sidebar-nav li {
+        padding-left: 4.5rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+        .sidebar-nav li a {
+            display: block;
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 1.4rem;
+        }
+
+            .sidebar-nav li a i {
+                margin-right: 1rem;
+            }
+
+            .sidebar-nav li a img {
+                width: 1.4rem;
+                margin-right: 1rem;
+            }
+
+        .sidebar-nav li .sidebar-multiple {
+            float: right;
+            padding-right: 4.5rem;
+            font-size: 1.8rem;
+            padding-top: 0.2rem;
+        }
+
+        .sidebar-nav li ul {
+            list-style: none;
+            padding: 0;
+            display: none;
+        }
+
+        .sidebar-nav li ul.active {
+            display: block;
+        }
+
+            .sidebar-nav li ul li {
+                padding-left: 2.4rem;
+                padding-top: 0.4rem;
+                padding-bottom: 0.4rem;
+            }
+
+                .sidebar-nav li ul li:first-child {
+                    padding-top: 0.8rem;
+                }
+
+        .sidebar-nav li.active {
+            background-color: rgba(63, 130, 247, .5);
+        }
+
+            .sidebar-nav li.active a {
+                color: #ffffff;
+            }
+
+            .sidebar-nav li.active ul.active a{
+                color: #ffffff;
+            }
+
+            .sidebar-nav li.active ul.active .active a{
+                color: #ffffff;
+            }
+
+        .sidebar-nav li:hover {
+            text-decoration: none;
+            color: #fff;
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .sidebar-nav li:active, .sidebar-nav li:focus {
+            text-decoration: none;
+        }
+
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 0;
+    }
+
+        #wrapper.toggled {
+            padding-left: 228px;
+        }
+
+    #sidebar-wrapper {
+        width: 0;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        width: 228px;
+    }
+
+    #page-content-wrapper {
+        padding: 20px 15px;
+        position: relative;
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    #wrapper.toggled #sidebar-wrapper {
+        width: 228px;
+    }
+}

@@ -1,0 +1,1 @@
+<h1>Codeigniter setup</h1>

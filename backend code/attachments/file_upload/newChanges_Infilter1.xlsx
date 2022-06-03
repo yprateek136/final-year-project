@@ -1,0 +1,20 @@
+1.Optimization of go to live
+2.compliance type
+ one time(live + 7 days)[no date]
+ due date base compliance(formulas according date)[monthly ,quaterly,yearly,Annually]
+ event base compliance(event cycele)[15 date or last date month]
+ on going compliance(ongoing cycele)[ quaterly 3 last of month of quater]
+ 
+ due date base compliance
+ 1.formulas[monthly ,quaterly,yearly,bienev]
+ 2.monthly finished
+	
+go live  	
+1.First allocation of compliance
+2.Go live of act[company_id,act_id,live_date]
+pages
+liveme.php
+golivecronfzl2.php[due date]
+note 
+extended date
+status =2
